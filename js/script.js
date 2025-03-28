@@ -38,3 +38,36 @@ for (i = 0; i < bikes.length; i++){
 console.log(lighter); // Stampo il risultato
 
 //----------------------------------------------------------
+// SNACK 2
+// Definisco l'array di oggetti
+const clubs = [
+    { 
+        nome: "FC Solaris", 
+        goals: 0, 
+        foulsReceived: 0, 
+    },
+    { 
+        nome: "United Wolves", 
+        goals: 0, 
+        foulsReceived: 0, 
+
+    },
+    { 
+        nome: "Thunder FC", 
+        goals: 0, 
+        foulsReceived: 0, 
+
+    },
+    { 
+        nome: "Neon Riders", 
+        goals: 0, 
+        foulsReceived: 0, 
+
+    },
+    { 
+        nome: "Skyline Athletic", 
+        goals: 0, 
+        foulsReceived: 0, 
+
+    }
+  ];
