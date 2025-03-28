@@ -71,3 +71,14 @@ const clubs = [
 
     }
   ];
+
+  // Functions
+  const randomNumber = () => parseInt(Math.floor(Math.random() * 50) + 1);
+
+  // Corpo del programma
+  for (i = 0; i < clubs.length; i++){
+    clubs[i].goals = randomNumber();
+    clubs[i].foulsReceived = randomNumber();
+  }
+
+  console.log(clubs)
