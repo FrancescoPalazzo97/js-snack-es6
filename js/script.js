@@ -1,6 +1,6 @@
 // SNACK 1
 // Definisco l'array di oggetti
- const bikes = [
+const bikes = [
     {
         name: `Velociter X3`,
         weight: 8.5,
@@ -21,4 +21,20 @@
         name: `EcoRide City`,
         weight: 9.8,
     },
- ]
+]
+
+// Definizione delle variabili necessarie
+let minWeight = bikes[0].weight;
+let lighter
+
+// Ciclo l'array per recuperare l'oggetto più leggero
+for (i = 0; i < bikes.length; i++){
+    if (minWeight > bikes[i].weight){
+        minWeight = bikes[i].weight;
+        lighter = bikes[i];
+    }
+}
+
+console.log(lighter); // Stampo il risultato
+
+//----------------------------------------------------------
