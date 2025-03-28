@@ -38,47 +38,61 @@ for (i = 0; i < bikes.length; i++){
 console.log(lighter); // Stampo il risultato
 
 //----------------------------------------------------------
+
 // SNACK 2
 // Definisco l'array di oggetti
 const clubs = [
     { 
-        nome: "FC Solaris", 
+        name: "FC Solaris", 
         goals: 0, 
         foulsReceived: 0, 
     },
     { 
-        nome: "United Wolves", 
-        goals: 0, 
-        foulsReceived: 0, 
-
-    },
-    { 
-        nome: "Thunder FC", 
+        name: "United Wolves", 
         goals: 0, 
         foulsReceived: 0, 
 
     },
     { 
-        nome: "Neon Riders", 
+        name: "Thunder FC", 
         goals: 0, 
         foulsReceived: 0, 
 
     },
     { 
-        nome: "Skyline Athletic", 
+        name: "Neon Riders", 
+        goals: 0, 
+        foulsReceived: 0, 
+
+    },
+    { 
+        name: "Skyline Athletic", 
         goals: 0, 
         foulsReceived: 0, 
 
     }
-  ];
+];
 
-  // Functions
-  const randomNumber = () => parseInt(Math.floor(Math.random() * 50) + 1);
+// Definisco le variabili necessarie
+let clubsFouls;
 
-  // Corpo del programma
-  for (i = 0; i < clubs.length; i++){
+// Functions
+const randomNumber = () => parseInt(Math.floor(Math.random() * 50) + 1);
+
+const remap = (arr) => {
+    let newArr = arr.map(item => {
+        return {name: item.name, foulsReceived: item.foulsReceived};
+    })
+    return newArr;
+}
+
+// Corpo del programma
+for (i = 0; i < clubs.length; i++){
     clubs[i].goals = randomNumber();
     clubs[i].foulsReceived = randomNumber();
-  }
+}
 
-  console.log(clubs)
+clubsFouls = remap(clubs)
+console.log(clubs);
+console.log(clubsFouls);
+
